@@ -1,0 +1,32 @@
+data_Kayis = read.delim("clipboard") 
+View(data_Kayis)
+
+data_Kayis.kolom4<- data_Kayis[4] 
+View(data_Kayis.kolom4)
+
+data_Kayis.kolom4<-ifelse(data_Kayis.kolom4>160, c("tinggi"), c("pendek")) 
+View(data_Kayis.kolom4)
+
+data_Kayis$Jurusan <- c("infor21") 
+View(data_Kayis)
+
+data_Kayis$Fakultas <- c("FTI") 
+View(data_Kayis)
+
+data_Kayis$Fakultas<-NULL 
+View(data_Kayis)
+
+data_Kayis.kolom1dan2<-data_Kayis[,1:2] 
+View(data_Kayis.kolom1dan2)
+data_Kayis.kolom3dan4<-data_Kayis[,3:4] 
+View(data_Kayis.kolom3dan4)
+data_Kayis.kolom1sd4<-cbind(data_Kayis.kolom1dan2, data_Kayis.kolom3dan4) 
+View(data_Kayis.kolom1sd4)
+
+data_Kayis.baris1sd5<-data_Kayis[1:5,] 
+data_Kayis.baris25sd29<-data_Kayis[25:29,] 
+data_Kayis.baris1sd29<-rbind(data_Kayis.baris1sd5, data_Kayis.baris25sd29) 
+View(data_Kayis.baris1sd29)
+
+data_Kayis.sort<-data_Kayis[order(data_Kayis$Waktu.Perjalanan),] 
+View(data_Kayis.sort)
